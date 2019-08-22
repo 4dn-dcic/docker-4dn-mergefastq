@@ -21,7 +21,7 @@ RUN apt-get update -y && apt-get install -y \
 WORKDIR /usr/local/bin
 
 # wrapper
-COPY scripts/ .
+COPY scripts/ /usr/local/bin/
 RUN chmod +x run*.sh
 
 # default command

@@ -1,0 +1,13 @@
+{
+
+    "input_fastqs": [
+      {
+        "class": "File",
+        "path": "/Users/lmercado/Documents/4DN/pipelines/merge-fastq/clean__R1.fastq.gz"
+      },
+      {
+        "class": "File",
+        "path": "/Users/lmercado/Documents/4DN/pipelines/merge-fastq/clean__R2.fastq.gz"
+      }
+    ]
+}

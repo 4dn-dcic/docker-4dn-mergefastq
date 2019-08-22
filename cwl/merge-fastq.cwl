@@ -30,7 +30,7 @@ inputs:
         type: "array"
 
 outputs:
-  merged_fastqs:
+  merged_fastq:
     type: File
     outputBinding:
       glob: "$(inputs.outprefix + '.fastq.gz')"

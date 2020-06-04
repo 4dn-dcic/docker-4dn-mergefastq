@@ -6,7 +6,7 @@ cwlVersion: v1.0
 
 requirements:
 - class: DockerRequirement
-  dockerPull: "4dndcic/"
+  dockerPull: "4dndcic/4dn-merge-fastq:v1"
 
 - class: "InlineJavascriptRequirement"
 
@@ -23,12 +23,16 @@ inputs:
       itemSeparator: " "
       position: 2
       separate: true
-    type: null
-      items: File
-      type: array
+    type:
+      - "null"
+      -
+        items: "File"
+        type: "array"
 
 outputs:
-  merged_fastqs:
+  merged_fastq:
     type: File
     outputBinding:
       glob: "$(inputs.outprefix + '.fastq.gz')"
+
+baseCommand: ["run-merge-fastq.sh"]

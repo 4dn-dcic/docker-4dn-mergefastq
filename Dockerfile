@@ -16,9 +16,12 @@ RUN apt-get update -y && apt-get install -y \
     zlib1g-dev \
     liblz4-tool \
     libxml2-dev
-    
+
+#Setting working directory & path
+WORKDIR /usr/local/bin
+
 # wrapper
-COPY scripts/ .
+COPY scripts/ /usr/local/bin/
 RUN chmod +x run*.sh
 
 # default command
